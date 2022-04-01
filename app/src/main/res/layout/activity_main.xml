@@ -39,11 +39,31 @@
         app:layout_constraintBottom_toTopOf="@id/guideline_h"/>
 
     <ListView
-        android:id="@+id/lv_letter"
+        android:id="@+id/lv_letter_gray"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ListView
+        android:id="@+id/lv_letter_yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_v2"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ListView
+        android:id="@+id/lv_letter_green"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_v2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_h"
         app:layout_constraintBottom_toBottomOf="parent"/>

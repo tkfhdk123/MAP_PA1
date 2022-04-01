@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listview1;
     private ListViewWord listviewword;
     private ArrayList<String> items;
+    private ArrayList<String> items2;
     public String answer;
     public int num;
     public int retry;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         retry=0;
         String[] dict=new String[6000];
         items=new ArrayList<>();
+        items2=new ArrayList<>();
 
         try {
             InputStream is=getApplicationContext().getAssets().open("wordle_words.txt");
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(view -> {
             EditText editText=(EditText)findViewById(R.id.edittext);
             String input=editText.getText().toString();
+            btn.setText(answer);
 
             if(input.equals(answer)){
 
@@ -67,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     listview1=findViewById(R.id.lv_word);
                     items.add(input);
-                    listviewword=new ListViewWord(MainActivity.this, items);
+                    items2.add(answer);
+                    listviewword=new ListViewWord(MainActivity.this, items, items2);
                     listview1.setAdapter(listviewword);
                 }
             }
