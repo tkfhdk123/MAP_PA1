@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ListViewWord extends BaseAdapter {
     private Context mContext;
@@ -59,11 +60,11 @@ public class ListViewWord extends BaseAdapter {
             ans[k]=String.valueOf(answer.charAt(k));
         }
 
-        tv1.setText(split[0]);
-        tv2.setText(split[1]);
-        tv3.setText(split[2]);
-        tv4.setText(split[3]);
-        tv5.setText(split[4]);
+        tv1.setText(split[0].toUpperCase());
+        tv2.setText(split[1].toUpperCase());
+        tv3.setText(split[2].toUpperCase());
+        tv4.setText(split[3].toUpperCase());
+        tv5.setText(split[4].toUpperCase());
 
         if(split[0].equals(ans[0])){
             tv1.setBackgroundColor(Color.parseColor("#99F691"));

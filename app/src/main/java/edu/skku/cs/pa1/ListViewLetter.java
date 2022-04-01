@@ -5,11 +5,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
+
 public class ListViewLetter extends BaseAdapter {
     private Context mContext;
-    private String items;
+    private ArrayList<String> items;
 
-    public ListViewLetter(Context mContext, String items){
+    public ListViewLetter(Context mContext, ArrayList<String> items){
         this.mContext=mContext;
         this.items=items;
     }
